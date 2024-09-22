@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 1% - Events</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- css -->
+  <link rel="stylesheet" href="css/other.css">
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- jq -->
+  <script src="js/jquery-3.6.3.min.js"></script>
+
+  <script>
+      $(document).ready((e)=>{
+        $('#upComingEve').hide()
+          $('#allEvents').click(()=>{
+            $('#allEventsss').fadeIn()
+            $('#allEvents').addClass('active')
+            $('#upCome').removeClass('active');
+            $('#upComingEve').fadeOut()
+            console.log('fade');
+          })
+          $('#upCome').click(()=>{
+            $('#allEvents').removeClass('active')
+            $('#upCome').addClass('active');
+            $('#upComingEve').fadeIn()
+            $('#allEventsss').fadeOut()
+
+          })
+      })
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Offcanvas navbar large">
+    <div class="container-fluid mx-auto">
+      <a class="navbar-brand" href="#">the 1%</a>
+      <div class="d-flex align-items-center">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="userLog hey">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+          <ul class="dropdown-menu">
+            <hr class="dropdown-divider">
+            <li><a class="dropdown-item" href="#">Change Profile</a></li>
+            <li><a class="dropdown-item" href="apply.html">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="offcanvas offcanvas-end text-bg-cus" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title navbar-brand" id="offcanvasNavbar2Label">THE 1%</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="revrs">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="events.html">Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="resource.html">Resources</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="information.html">Information</a>
+                </li>
+              </ul>
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="msg"><i class="fa fa-envelope fs-5 mx-4 text-dark"></i></div>
+                <div class="searchbarrr">
+                  <form class="d-flex input-group" role="search">
+                    <i class="fa fa-search mx-auto my-auto"></i>
+                    <input class="form-control srchInp" type="search" placeholder="Search" aria-label="Search">
+                  </form>
+                </div>
+                <div class="userLog bye">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                  <ul class="dropdown-menu">
+                    <hr class="dropdown-divider">
+                    <!-- <li><a class="dropdown-item" href="#">Change Profile</a></li> -->
+                    <li><a class="dropdown-item" href="apply.html">Logout</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <header class="jumbotron event">
+    <div class="headInfoo">
+        <h1>Events</h1>
+    </div>
+  </header>
+  <section class="container-fluid">
+      <h2 class="mt-3">Events</h2>
+      <div class="evBar d-flex">
+        <button class="me-3 active" id="allEvents">All</button>
+        <button id="upCome">Upcoming Events</button>
+      </div>
+      <div class="">
+          <div class="carosel11" id="allEventsss">
+            <div class="customer-logo slider" id="allEveCaro">
+              <div class="slide">
+                <div class="allEvnts">
+                  <div class="row my-4 box">
+                      <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                        <img src="imgs/ca1.jpg" alt="" class="w-100 object-fit-cover">
+                      </div>
+                      <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                          <div class="evDesc d-flex flex-column justify-content-between">
+                              <div>
+                                <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                              <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                              </div>
+                              <div class="timing d-flex justify-content-between text-white pe-2">
+                                  <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                                  <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                                  <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                                  <div class="time fw-bolder d-flex fs-2">9:00<span class="smal mt-auto mb-2 text-uppercase fw-lighter fs-6">pm</span></div>
+                                  <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div>
+                              </div>
+                              <div class="d-flex my-2 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  </svg>
+                                  <p class="m-0 ms-2 f-14">Lorem ipsum dolor sit amet consectetur.</p>
+                              </div>
+                              <button class="active mt-2"><a href="book.html">Book Now</a></button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca2.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white pe-2">
+                            <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div>
+                          </div>
+                          <div class="d-flex my-2 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  </svg>
+                                  <p class="m-0 ms-2 f-14">Lorem ipsum dolor sit amet consectetur.</p>
+                              </div>
+                          <button class="active mt-2"><a href="book.html">Book Now</a></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca3.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white pe-2">
+                            <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div>
+                          </div>
+                          <div class="d-flex my-2 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  </svg>
+                                  <p class="m-0 ms-2 f-14">Lorem ipsum dolor sit amet consectetur.</p>
+                              </div>
+                          <button class="active mt-2"><a href="book.html">Book Now</a></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca4.jpg" alt="c4" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white pe-2">
+                            <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div>
+                          </div>
+                          <div class="d-flex my-2 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  </svg>
+                                  <p class="m-0 ms-2 f-14">Lorem ipsum dolor sit amet consectetur.</p>
+                              </div>
+                          <button class="active mt-2"><a href="book.html">Book Now</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="allEvnts my-3">
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca4.jpg" alt="c4" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white pe-2">
+                            <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div>
+                          </div>
+                          <div class="d-flex my-2 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  </svg>
+                                  <p class="m-0 ms-2 f-14">Lorem ipsum dolor sit amet consectetur.</p>
+                              </div>
+                          <button class="active mt-2"><a href="book.html">Book Now</a></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca2.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white pe-2">
+                            <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div>
+                          </div>
+                          <div class="d-flex my-2 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  </svg>
+                                  <p class="m-0 ms-2 f-14">Lorem ipsum dolor sit amet consectetur.</p>
+                              </div>
+                          <button class="active mt-2"><a href="book.html">Book Now</a></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca1.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white pe-2">
+                            <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div>
+                          </div>
+                          <div class="d-flex my-2 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  </svg>
+                                  <p class="m-0 ms-2 f-14">Lorem ipsum dolor sit amet consectetur.</p>
+                              </div>
+                          <button class="active mt-2"><a href="book.html">Book Now</a></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca3.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white pe-2">
+                            <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div>
+                          </div>
+                          <div class="d-flex my-2 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  </svg>
+                                  <p class="m-0 ms-2 f-14">Lorem ipsum dolor sit amet consectetur.</p>
+                              </div>
+                          <button class="active mt-2"><a href="book.html">Book Now</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="allEvnts my-3">
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca3.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white pe-2">
+                            <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div>
+                          </div>
+                          <div class="d-flex my-2 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  </svg>
+                                  <p class="m-0 ms-2 f-14">Lorem ipsum dolor sit amet consectetur.</p>
+                              </div>
+                          <button class="active mt-2"><a href="book.html">Book Now</a></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca4.jpg" alt="c4" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white pe-2">
+                            <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div>
+                          </div>
+                          <div class="d-flex my-2 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  </svg>
+                                  <p class="m-0 ms-2 f-14">Lorem ipsum dolor sit amet consectetur.</p>
+                              </div>
+                          <button class="active mt-2"><a href="book.html">Book Now</a></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca1.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white pe-2">
+                            <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div>
+                          </div>
+                          <div class="d-flex my-2 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  </svg>
+                                  <p class="m-0 ms-2 f-14">Lorem ipsum dolor sit amet consectetur.</p>
+                              </div>
+                          <button class="active mt-2"><a href="book.html">Book Now</a></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca2.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white pe-2">
+                            <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div>
+                          </div>
+                          <div class="d-flex my-2 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  </svg>
+                                  <p class="m-0 ms-2 f-14">Lorem ipsum dolor sit amet consectetur.</p>
+                              </div>
+                          <button class="active mt-2"><a href="book.html">Book Now</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caroBtnss mb-3" id="caro2Btn"></div>
+          </div>
+          <div class="carousel22" id="upComingEve">
+            <div class="slider customer-logo" id="upComeCaro">
+              <div class="slide">
+                <div class="upcoming my-3">
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca4.jpg" alt="c4" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white">
+                            <!-- <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div> -->
+                            <p class="f-19 fw-bold">Coming Soon</p>
+                          </div>
+                          <button class="def mt-2">Booking Soon</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca2.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white">
+                            <!-- <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div> -->
+                            <p class="f-19 fw-bold">Coming Soon</p>
+                          </div>
+                          <button class="def mt-2">Booking Soon</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca1.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white">
+                            <!-- <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div> -->
+                            <p class="f-19 fw-bold">Coming Soon</p>
+                          </div>
+                          <button class="def mt-2">Booking Soon</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca3.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white">
+                            <!-- <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div> -->
+                            <p class="f-19 fw-bold">Coming Soon</p>
+                          </div>
+                          <button class="def mt-2">Booking Soon</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="upcoming my-3">
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca4.jpg" alt="c4" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white">
+                            <!-- <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div> -->
+                            <p class="f-19 fw-bold">Coming Soon</p>
+                          </div>
+                          <button class="def mt-2">Booking Soon</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca2.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white">
+                            <!-- <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div> -->
+                            <p class="f-19 fw-bold">Coming Soon</p>
+                          </div>
+                          <button class="def mt-2">Booking Soon</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca1.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white">
+                            <!-- <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div> -->
+                            <p class="f-19 fw-bold">Coming Soon</p>
+                          </div>
+                          <button class="def mt-2">Booking Soon</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3 box">
+                    <div class="col-lg-4 col-md-4 col-xs-12 s1 rounded p-0">
+                      <img src="imgs/ca3.jpg" alt="" class="w-100 object-fit-cover">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-xs-12 d-flex">
+                      <div class="evDesc d-flex flex-column justify-content-between">
+                          <div>
+                            <h6 class="text-white f-16 mt-1">Lorem ipsum dolor sit amet, consectetur.</h6>
+                          <p class="fw-lighter f-16 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatum ratione esse fuga provident, alias nisi</p>
+                          </div>
+                          <div class="timing d-flex justify-content-between text-white">
+                            <!-- <div class="date fs-2 fw-bolder align-items-center d-flex">20</div>
+                            <div class="month text-uppercase fw-lighter d-flex align-items-center">dec</div>
+                            <div class="year text-uppercase fw-lighter d-flex align-items-center">2023</div>
+                            <div class="time fw-bolder d-flex justify-content-end align-items-end"><p class="fs-2 m-0 text-white">9:00</p><span class="smal mb-2 text-uppercase fw-lighter fs-6 align-items-end d-flex">pm</span></div>
+                            <div class="day d-flex align-items-center"><span class="smal smal text-uppercase fw-bold fs-6">fri</span></div> -->
+                            <p class="f-19 fw-bold">Coming Soon</p>
+                          </div>
+                          <button class="def mt-2">Booking Soon</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="caroBtnss mb-3" id="car3Btn"></div>
+          </div>
+      </div>
+    </section>
+    <section class="">
+      <h2 class="fw-bold container-fluid">Our Plans</h2>
+      <div class="planss">
+          <div class="row d-flex justify-content-center justify-content-between mx-1">
+              <div class="col-lg-4 hover text-center d-flex flex-column justify-content-center align-items-center border border-dark py-4 mb-4">
+                  <h3 class="fw-bold text-white">Free</h3>
+                  <p class="price">0$</p>
+                  <p class="text-capitalize f-19">2 releases included</p>
+                  <div>
+                    <div class="decps text-white d-flex align-items-center mb-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                        <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                      </svg>
+                      <p class="m-0 ms-2 f-19">Distribution within 14 days</p>
+                    </div>
+                    <div class="decps text-white d-flex align-items-center mb-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                        <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                      </svg>
+                      <p class="m-0 ms-2 f-19">Keep 80% of your earnings</p>
+                    </div>
+                    <div class="decps text-white d-flex align-items-center mb-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                        <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                      </svg>
+                      <p class="m-0 ms-2 f-19">24/7 Support</p>
+                    </div>
+                  </div>
+                  <button class="fs-6 mt-4">Start for free</button>
+              </div>
+              <div class="col-lg-4 hover text-center d-flex flex-column justify-content-center align-items-center border border-dark py-4 mb-4">
+                <h3 class="fw-bold text-white">Basic</h3>
+                <p class="price">4.99$</p>
+                <p class="text-capitalize f-19">2 releases included</p>
+                <div>
+                  <div class="decps text-white d-flex align-items-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                      <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                    </svg>
+                    <p class="m-0 ms-2 f-19">Distribution within 14 days</p>
+                  </div>
+                  <div class="decps text-white d-flex align-items-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                      <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                    </svg>
+                    <p class="m-0 ms-2 f-19">Keep 80% of your earnings</p>
+                  </div>
+                  <div class="decps text-white d-flex align-items-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                      <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                    </svg>
+                    <p class="m-0 ms-2 f-19">24/7 Support</p>
+                  </div>
+                </div>
+                <button class="fs-6 mt-4"><a href="payment.html">Join Now</a></button>
+              </div>
+              <div class="col-lg-4 hover text-center d-flex flex-column justify-content-center align-items-center border border-dark py-4 mb-4">
+                <h3 class="fw-bold text-white">Premium</h3>
+                <p class="price">19.99$</p>
+                <p class="text-capitalize f-19 ">2 releases included</p>
+                <div>
+                  <div class="decps text-white d-flex align-items-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                      <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                    </svg>
+                    <p class="m-0 ms-2 f-19">Distribution within 14 days</p>
+                  </div>
+                  <div class="decps text-white d-flex align-items-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                      <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                    </svg>
+                    <p class="m-0 ms-2 f-19">Keep 80% of your earnings</p>
+                  </div>
+                  <div class="decps text-white d-flex align-items-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                      <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                    </svg>
+                    <p class="m-0 ms-2 f-19">24/7 Support</p>
+                  </div>
+                </div>
+                <button class="fs-6 mt-4">Join Now</button>
+            </div>
+          </div>
+      </div>
+  </section>
+  <section class="container-fluid mx-auto mt-4">
+    <div class="headInfo text-center py-3">
+        <h2 class="fw-bold">News & Articles</h2>
+        <p>Stay up to date with the latest news and exclusive content</p>
+      </div>
+      <div class="row w-100 mx-auto arti mb-1 justify-content-center gx-5 reverse gy-3">
+        <div class="arti col-xl-6 col-lg-12 bg-cus p-0 rounded">
+          <div class="p-0">
+            <img src="imgs/dinner.jpg" class="w-100 rounded-top" alt="">
+          </div>
+          <div class="s4 ps-3 my-1">
+            <div class="d-flex align-items-center pt-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-calendar2" viewBox="0 0 16 16">
+                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+                <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
+              </svg><p class="m-0 f-14 ms-2">Jan/22/2022</p>
+            </div>
+          </div>
+          <div class="s4 px-3">
+            <div class="d-flex flex-column justify-content-between">
+              <div>
+                <h6 class="my-1 lh-sm text-white">Lorem ipsum dolor sit amet consectetur. Porta ut tellus lacuss amet nibh cras at ac.</h6>
+              <p class="lh-sm f-19 fw-lighter">Lorem ipsum dolor sit ametconsect consectetur. Pulvinar non atconsectetur consectetureuismod.dolor sit ametconsect consectetur. Pulvinar non aconsectetureuismod.dolor sit ametconsect consectetur. Pulvinar non att </p>
+              </div>
+              <a href="" class="read m-0 f-19">Read More <i class="fa fa-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="arti col-xl-6 col-lg-12">
+            <div class="row mb-3 bg-cus p-2 rounded border border-dark w-100 mx-auto">
+              <div class="col-lg-4 col-md-4 p-0 s3 rounded">
+                <img src="imgs/d1.jpg" alt="">
+              </div>
+              <div class="col-lg-8 col-md-8">
+                  <div class="d-flex align-items-center py-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-calendar2" viewBox="0 0 16 16">
+                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+                      <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
+                    </svg><p class="m-0 f-14 ms-2">Jan/22/2022</p>
+                  </div>
+                  <h6 class="f-16 lh-sm text-white">Lorem ipsum dolor sit ametconsect consectetur.</h6>
+                  <p class="f-14 m-0">Lorem ipsum dolor sit ametconsect consectetur. Pulvinar non atconsectetur non </p>
+                  <a href="" class="read">Read More <i class="fa fa-right-long"></i></a>
+              </div>
+            </div>
+            <div class="row mb-3 p-2 rounded border border-dark w-100 mx-auto">
+              <div class="col-lg-4 col-md-4 col-sm-12 p-0 s3 rounded">
+                <img src="imgs/apply2.jpg" alt="">
+              </div>
+              <div class="col-lg-8 col-md-8">
+                  <div class="d-flex align-items-center py-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-calendar2" viewBox="0 0 16 16">
+                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+                      <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
+                    </svg><p class="m-0 f-14 ms-2">Jan/22/2022</p>
+                  </div>
+                  <h6 class="f-16 lh-sm text-white">Lorem ipsum dolor sit ametconsect consectetur.</h6>
+                  <p class="f-14 m-0">Lorem ipsum dolor sit ametconsect consectetur. Pulvinar non atconsectetur non </p>
+                  <a href="" class="read m-0">Read More <i class="fa fa-right-long"></i></a>
+              </div>
+            </div>
+            <div class="row p-2 rounded border border-dark w-100 mx-auto">
+              <div class="col-lg-4 col-md-4 p-0 s3 sm rounded">
+                <img src="imgs/d2.jpg" alt="">
+              </div>
+              <div class="col-lg-8 col-md-8">
+                  <div class="d-flex align-items-center py-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-calendar2" viewBox="0 0 16 16">
+                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+                      <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
+                    </svg><p class="m-0 f-14 ms-2">Jan/22/2022</p>
+                  </div>
+                  <h6 class="f-16 lh-sm text-white">Lorem ipsum dolor sit ametconsect consectetur.</h6>
+                  <p class="f-14 m-0">Lorem ipsum dolor sit ametconsect consectetur. Pulvinar non atconsectetur non </p>
+                  <a href="" class="read m-0">Read More <i class="fa fa-right-long"></i></a>
+              </div>
+            </div>
+        </div>
+      </div>
+  </section>
+    <div class="newsletter my-4">
+      <div class="container-fluid text-center d-flex flex-column align-items-center justify-content-center">
+        <h3 class="fw-bold text-white">COMMUNITY LINKS</h3>
+        <p class="f-16 fw-lighter">Lorem ipsum dolor sit ametconsect consectetur. Pulvinar non at euismod.</p>
+        <div class="btns d-flex">
+          <button class="sm me-2"><i class="fa-brands fa-instagram me-1"></i> View Profile</button>
+          <button class="sm ms-2"><i class="fa-brands fa-telegram me-1"></i> Join Group</button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mx-auto text-center">
+      <div class="covertext m-0">the 1%</div>
+      <p class="f-16 fw-lighter">Lorem ipsum dolor sit ametconsect consectetur. Pulvinar non atconsectetur <br> consectetureuismod.dolor sit ametconsect consectetur. Pulvinar nonametconsect consectetur.</p>
+    </div>
+  <footer class="d-flex flex-wrap justify-content-center align-items-center py-1 border-top border-dark">
+      <div class="container-fluid">
+        <div class="icons w-30">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-telegram"></i>
+          <i class="fa-brands fa-whatsapp"></i>
+      </div>
+      <ul class="nav col-md-4 w-30">
+        <li class="nav-item"><a href="#" class="nav-link px-2 fw-lighter">Events</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 fw-lighter">Resources</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 fw-lighter">Information</a></li>
+      </ul>
+      <p class="col-md-4 mb-0 f-14 fw-lighter d-flex justify-content-end">&copy; 2022 Company, Inc</p>
+      </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  <script src="js/jquery-3.6.3.min.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/slider.js"></script>
+</body>
+</html>
