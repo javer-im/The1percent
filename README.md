@@ -11,10 +11,11 @@ Please note: This is not a fully functional website and has no backend or dynami
 
 ### How to use: 
  clone the repo and run
- ------------
-    -  git clone https://github.com/javer-im/The1percent.git
-    -  cd The1percent
-    -  open apply.html (and click Join Now || Log in)
-------------
+-----
+    git clone https://github.com/javer-im/The1percent.git
+----
+    cd The1percent
+-
+  open apply.html (and click Join Now || Log in)
   
 
